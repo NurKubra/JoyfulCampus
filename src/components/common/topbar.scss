@@ -1,0 +1,7 @@
+@use "../../styles/variables" as v; //variables dosyasini kullancam ama ismini v verdim 
+
+.topbar{
+    background-color: v.$color1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

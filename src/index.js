@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "./styles/index.scss"
+import { Provider as StoreProvider } from 'react-redux'
+import store from './store';
+import { PrimeReactProvider } from "primereact/api";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <StoreProvider store={store}>
+      <PrimeReactProvider>
+        <App />
+      </PrimeReactProvider>
+    </StoreProvider>
   </React.StrictMode>
 );
 
