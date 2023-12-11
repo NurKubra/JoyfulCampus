@@ -23,9 +23,10 @@ const UserMenuAuth = () => {
     navigate("/"); //cikis aptiktan sonra ana sayfaya gondermis olduk 
   };
 
+  //login olanlar icin sayfa degismini takip eder
   const handleNavigate = (link) => { //menuler arasi gecerken menunun yeniden kapanmasini saglamaisi icin yazdik 
     setShow(false);  //önce menuyu kapat sonra istedigim yere sayfaya git 
-    dispatch(setOperation(null))
+    dispatch(setOperation(null)) //her yeni sayfaya gecerken null a cektik 
     dispatch(setRecord(null))  
     navigate(link); 
   };
